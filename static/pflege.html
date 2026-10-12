@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pflege – DocHub</title>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <style>
+    .p-tree .list-group-item { border-color: var(--p-line); font-size: .9rem; }
+    .p-tree .list-group-item.active { background: var(--p-green-soft); color: var(--p-green); border-color: var(--p-line); font-weight: 600; }
+    .p-tree .team-row { background: #f9faf9; font-weight: 700; }
+    .p-rows .row { --bs-gutter-x: .5rem; margin-bottom: .5rem; }
+    .p-form-section { font-size: .95rem; margin: 2rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid var(--p-line); }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container py-4 py-lg-5">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+      <div>
+        <h1 class="h3 mb-1">Anwendungen pflegen</h1>
+        <p class="text-muted mb-0">Teams und Anwendungen anlegen, Adressen, API, Techstack und Verknüpfungen eintragen.</p>
+      </div>
+      <div class="d-flex gap-2" id="admin-actions" hidden>
+        <button class="btn btn-outline-primary" id="show-users"><i class="bi bi-people me-1"></i>Benutzer &amp; Rechte</button>
+        <button class="btn btn-outline-primary" id="new-team"><i class="bi bi-plus-lg me-1"></i>Team anlegen</button>
+      </div>
+    </div>
+
+    <div id="alert" class="alert d-none" role="status"></div>
+
+    <div class="row g-4" id="workspace" hidden>
+      <div class="col-lg-4">
+        <div class="list-group p-tree" id="tree"></div>
+      </div>
+      <div class="col-lg-8">
+        <div class="p-panel" id="editor">
+          <div class="p-empty border-0"><i class="bi bi-hand-index"></i>Wähle links ein Team oder eine Anwendung aus.</div>
+        </div>
+      </div>
+    </div>
+    <div id="no-access" hidden></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pflege.js"></script>
+</body>
+</html>

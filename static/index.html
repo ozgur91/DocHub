@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocHub – Dokumentenmanagement</title>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="p-hero">
+    <div class="p-hero-art" aria-hidden="true"></div>
+    <div class="container">
+      <nav aria-label="Brotkrumen">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">AOK intern</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Dokumentenmanagement</li>
+        </ol>
+      </nav>
+      <h1>DocHub</h1>
+      <p class="lead">Ein gemeinsamer Einstieg. Alle Anwendungen für unsere Abteilung an einem Ort.</p>
+      <span class="p-tagline">Gemeinsam. Digital. Vernetzt.</span>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <!-- Ansicht: alle Anwendungen -->
+    <div id="view-apps">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h2 class="h4 mb-1">Unsere Anwendungen</h2>
+          <p class="text-muted mb-0 small">Der richtige Einstieg für jedes Team.</p>
+        </div>
+        <span class="text-muted small"><i class="bi bi-grid me-1"></i><span id="team-total">0</span> Teams</span>
+      </div>
+
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4">
+        <ul class="nav p-tabs flex-grow-1" id="team-tabs" role="tablist"></ul>
+        <div class="p-search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="search" class="form-control" placeholder="Anwendung suchen …" aria-label="Anwendung suchen">
+        </div>
+      </div>
+
+      <div id="team-sections" class="row gx-4"></div>
+    </div>
+
+    <!-- Ansicht: Favoriten -->
+    <div id="view-favs" hidden>
+      <h2 class="h4 mb-1">Meine Favoriten</h2>
+      <p class="text-muted small mb-4">Deine persönliche Auswahl, auf jedem Rechner verfügbar.</p>
+      <div id="fav-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-5 g-3"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Detail-Dialog einer Anwendung -->
+  <div class="modal fade p-modal" id="app-modal" tabindex="-1" aria-labelledby="app-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body" id="app-modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
